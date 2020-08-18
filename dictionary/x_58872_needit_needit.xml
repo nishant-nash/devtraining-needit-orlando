@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="HR" label="Request Type" mandatory="true" max_length="40" name="u_choice_2" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human resources" sequence="0" value="HR"/>
+                <element inactive_on_update="false" label="Legal" sequence="1" value="legal"/>
+                <element inactive_on_update="false" label="Facilities" sequence="2" value="facilities"/>
+                <element inactive_on_update="false" label="your department choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="What Needed" mandatory="true" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Legal" sequence="0" value="legal"/>
+                <element inactive_on_update="false" label="HR1" sequence="1" value="hr1"/>
+                <element inactive_on_update="false" label="HR2" sequence="2" value="hr2"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true" label="Dollar value" mandatory="true" max_length="20" name="u_currency_1" type="currency"/>
+        <element attributes="encode_utf8=false" label="Requested For" mandatory="true" max_length="32" name="u_reference_1" reference="sys_user" type="reference"/>
+    </element>
+</database>
